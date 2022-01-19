@@ -1,7 +1,9 @@
 {
   "name": "@ibor/root",
   "private": true,
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "new-version": "lerna version --conventional-commits --yes",
     "test": "lerna run test",
