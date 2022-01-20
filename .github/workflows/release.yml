@@ -29,6 +29,9 @@ jobs:
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
 
+      - name: Bootstrap lerna
+        run: npm run bootstrap
+
       - name: Bump versions and publish packages
         run: |
           npm run version:ci

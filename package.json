@@ -8,6 +8,7 @@
     "new-version": "lerna version --conventional-commits --yes",
     "test": "lerna run test",
     "diff": "lerna run diff",
+    "bootstrap": "npx lerna bootstrap",
     "publish:ci": "lerna publish from-package --yes",
     "version:ci": "lerna version --yes --conventional-commits --create-release github --message 'chore(release): publish'"
   },
