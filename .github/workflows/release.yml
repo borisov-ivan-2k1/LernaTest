@@ -1,9 +1,12 @@
 name: Release
 
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
+    inputs:
+      new_version:
+        description: 'New version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]'
+        required: true
+        default: 'patch'
 
 jobs:
   publish-gpr:
