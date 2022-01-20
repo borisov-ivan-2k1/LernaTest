@@ -1,5 +1,5 @@
 {
-  "name": "@ibor/root",
+  "name": "@borisov-ivan-2k1/root",
   "private": true,
   "workspaces": [
     "packages/*"
