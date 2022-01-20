@@ -1,6 +1,7 @@
 {
   "name": "@ibor/package-1",
   "version": "0.2.1",
+  "private": true,
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",

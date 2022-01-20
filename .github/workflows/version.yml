@@ -1,4 +1,4 @@
-name: Virsion
+name: Bump versions
 
 on:
   workflow_dispatch:
