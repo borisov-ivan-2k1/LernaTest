@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/borisov-ivan-2k1/LernaTest/compare/@ibor/package-1@0.1.3...@ibor/package-1@0.1.4) (2022-01-20)
+
+**Note:** Version bump only for package @ibor/package-1
+
+
+
+
+
 ## [0.1.3](https://github.com/borisov-ivan-2k1/LernaTest/compare/@ibor/package-1@0.1.2...@ibor/package-1@0.1.3) (2022-01-20)
 
 **Note:** Version bump only for package @ibor/package-1
