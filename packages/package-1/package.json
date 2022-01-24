@@ -1,7 +1,7 @@
 {
   "name": "@borisov-ivan-2k1/package-1",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
