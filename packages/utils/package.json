@@ -1,0 +1,16 @@
+{
+  "name": "@borisov-ivan-2k1/utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:borisov-ivan-2k1/LernaTest.git",
+    "directory": "packages/utils"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
