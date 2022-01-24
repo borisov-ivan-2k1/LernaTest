@@ -30,7 +30,7 @@ jobs:
       - name: Bump versions and release
         run: |
           lerna version ${{ github.event.inputs.new_version }} --yes --conventional-commits --create-release github
-          lerna publish from-git
+          lerna publish from-package --yes
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
