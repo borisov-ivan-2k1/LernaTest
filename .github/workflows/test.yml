@@ -9,6 +9,10 @@ on:
         default: 'patch'
 
 jobs:
-  publish:
+  publish-gpr:
     name: Publish to github
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
