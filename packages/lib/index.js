@@ -1,3 +1,3 @@
-export const logger = () => {
-    console.log('LOGGER')
+export const logger = (str) => {
+    console.log('LOGGER', str)
 }
