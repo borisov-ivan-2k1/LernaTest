@@ -2,15 +2,10 @@ name: Test
 
 on:
   workflow_dispatch:
-    inputs:
-      new_version:
-        description: 'New version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]'
-        required: true
-        default: 'patch'
 
 jobs:
-  publish-gpr:
-    name: Publish to github
+  publish:
+    name: Empty
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
