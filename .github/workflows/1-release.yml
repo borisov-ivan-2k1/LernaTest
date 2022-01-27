@@ -1,0 +1,16 @@
+# action выполняется при пуше в мастер
+# создаёт и пушит теги, заводит релизы и публикует в npm
+
+name: 1 Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Empty
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
