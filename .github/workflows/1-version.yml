@@ -1,0 +1,15 @@
+# action повышает версию и публикует в npm
+
+name: 1 Version
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Empty
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
