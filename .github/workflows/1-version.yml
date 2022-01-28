@@ -60,7 +60,7 @@ jobs:
 
       - name: publish
         run: |
-          lerna version ${{ github.event.inputs.new_version }} --yes --conventional-commits
+          lerna version ${{ github.event.inputs.new_version }} --yes --conventional-commits --amend
           lerna publish from-package --yes
           
         env:
