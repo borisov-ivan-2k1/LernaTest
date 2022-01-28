@@ -51,7 +51,7 @@ jobs:
 
       - name: publish
         run: |
-          lerna version ${{ github.event.inputs.new_version }} --yes --force-publish --conventional-commits --no-git-tag-version
+          lerna version ${{ github.event.inputs.new_version }} --yes
           lerna publish from-git --yes
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
