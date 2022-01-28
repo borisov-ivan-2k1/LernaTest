@@ -36,9 +36,7 @@ jobs:
           node-version: 14
           registry-url: 'https://npm.pkg.github.com/'
 
-      - run: lerna exec -- npm ci
-
-      - run: lerna exec -- npm run lint
+      - run: npm install
 
       - name: publish
         run: |
