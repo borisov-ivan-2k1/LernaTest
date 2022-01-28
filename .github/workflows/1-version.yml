@@ -26,6 +26,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
 
       - name: Set credentials
         run: |
@@ -53,6 +56,8 @@ jobs:
         run: |
           lerna version ${{ github.event.inputs.new_version }} --yes --conventional-commits
           lerna publish from-package --yes
+
+      - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
           
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
