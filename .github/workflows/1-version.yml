@@ -52,7 +52,7 @@ jobs:
       - name: bump version
         run: lerna version ${{ github.event.inputs.new_version }} --yes --conventional-commits --no-git-tag-version
       - name: SHOW DIFF
-        run: lerna iff
+        run: lerna diff
       - name: publish
         run: lerna publish from-git --yes
           
