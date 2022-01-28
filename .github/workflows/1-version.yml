@@ -58,12 +58,8 @@ jobs:
 
       - run: lerna exec -- npm run lint
 
-      - name: bump version
-        run: lerna version ${{ github.event.inputs.new_version }} --force-publish=${{ github.event.inputs.package }} --yes --amend --conventional-commits
-      - name: SHOW DIFF
-        run: lerna diff
       - name: publish
-        run: lerna publish from-package --yes --no-git-reset
+        run: lerna publish ${{ github.event.inputs.new_version }} from-package --yes --no-git-reset
           
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -75,3 +71,8 @@ jobs:
 # поменять git config
 # возможно поменять ${{ runner.os }}-node-${{ hashFiles('**/package.json') }} с node на lerna
 # Поменять env
+
+#      - name: bump version
+#        run: lerna version ${{ github.event.inputs.new_version }} --force-publish=${{ github.event.inputs.package }} --yes --amend --conventional-commits
+#      - name: SHOW DIFF
+#        run: lerna diff
