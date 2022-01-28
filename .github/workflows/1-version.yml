@@ -4,12 +4,75 @@ name: 1 Version
 
 on:
   workflow_dispatch:
+    inputs:
+      new_version:
+        description: 'Select new version'
+        type: choice
+        required: true
+        options:
+        - major
+        - minor
+        - patch
+        - premajor
+        - preminor
+        - prepatch
+        - prerelease
+        - from-git
+        default: patch
+      package:
+        description: 'Select package'
+        type: choice
+        required: true
+        options:
+        - '@borisov-ivan-2k1/lib'
+        - '@borisov-ivan-2k1/utils'
+        default: patch
 
 jobs:
   publish:
-    name: Empty
+    name: bump version and publish
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Set credentials
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+
+      - uses: actions/cache@v2
+        id: cache
         with:
-          fetch-depth: 0
+          path: |
+            node_modules
+            */*/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+
+      - uses: actions/setup-node@v2
+        id: node_build
+        with:
+          node-version: 14
+          registry-url: 'https://npm.pkg.github.com/'
+
+      - run: lerna exec -- npm ci
+
+      - run: lerna exec -- npm run lint
+
+      - name: publish
+        run: lerna version ${{ github.event.inputs.new_version }} --yes --conventional-commits
+          
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+
+
+
+# поменять git config
+# возможно поменять ${{ runner.os }}-node-${{ hashFiles('**/package.json') }} с node на lerna
+# Поменять env
+
+#      - name: bump version
+#        run: lerna version ${{ github.event.inputs.new_version }} --force-publish=${{ github.event.inputs.package }} --yes --amend --conventional-commits
+#      - name: SHOW DIFF
+#        run: lerna diff
