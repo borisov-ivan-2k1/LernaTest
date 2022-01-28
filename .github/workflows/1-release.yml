@@ -4,13 +4,50 @@
 name: 1 Release
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
 
 jobs:
-  publish:
-    name: Empty
+  release:
+    name: create release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Set credentials
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+
+      - uses: actions/cache@v2
+        id: cache
         with:
-          fetch-depth: 0
+          path: |
+            node_modules
+            */*/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+
+      - uses: actions/setup-node@v2
+        id: node_build
+        with:
+          node-version: 14
+          registry-url: 'https://npm.pkg.github.com/'
+
+      - run: lerna exec -- npm ci
+
+      - run: lerna exec -- npm run lint
+
+      - run: |
+          lerna version --yes --conventional-commits --create-release github
+          lerna publish from-package --yes 
+    
+
+
+
+# поменять git config
+# возможно поменять ${{ runner.os }}-node-${{ hashFiles('**/package.json') }} с node на lerna
