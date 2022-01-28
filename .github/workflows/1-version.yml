@@ -19,14 +19,6 @@ on:
         - prerelease
         - from-git
         default: patch
-      package:
-        description: 'Select package'
-        type: choice
-        required: true
-        options:
-        - '@borisov-ivan-2k1/lib'
-        - '@borisov-ivan-2k1/utils'
-        default: patch
 
 jobs:
   publish:
@@ -54,10 +46,6 @@ jobs:
           node-version: 14
           registry-url: 'https://npm.pkg.github.com/'
 
-      - run: lerna exec -- npm ci
-
-      - run: lerna exec -- npm run lint
-
       - name: publish
         run: |
           lerna version ${{ github.event.inputs.new_version }} --yes --conventional-commits --amend
@@ -73,6 +61,10 @@ jobs:
 # поменять git config
 # возможно поменять ${{ runner.os }}-node-${{ hashFiles('**/package.json') }} с node на lerna
 # Поменять env
+
+
+#      - run: lerna exec -- npm ci
+#      - run: lerna exec -- npm run lint
 
 #      - name: bump version
 #        run: lerna version ${{ github.event.inputs.new_version }} --force-publish=${{ github.event.inputs.package }} --yes --amend --conventional-commits
