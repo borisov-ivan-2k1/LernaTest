@@ -50,7 +50,7 @@ jobs:
       - run: lerna exec -- npm run lint
 
       - name: bump version
-        run: lerna version ${{ github.event.inputs.new_version }} --yes --amend --conventional-commits --no-git-tag-version
+        run: lerna version ${{ github.event.inputs.new_version }} --yes --amend --conventional-commits
       - name: SHOW DIFF
         run: lerna diff
       - name: publish
