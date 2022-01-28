@@ -3,6 +3,110 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.19](https://github.com/borisov-ivan-2k1/LernaTest/compare/@borisov-ivan-2k1/lib@3.0.18...@borisov-ivan-2k1/lib@3.0.19) (2022-01-28)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
+## [3.0.18](https://github.com/borisov-ivan-2k1/LernaTest/compare/@borisov-ivan-2k1/lib@3.0.17...@borisov-ivan-2k1/lib@3.0.18) (2022-01-28)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
+## [3.0.17](https://github.com/borisov-ivan-2k1/LernaTest/compare/@borisov-ivan-2k1/lib@3.0.16...@borisov-ivan-2k1/lib@3.0.17) (2022-01-28)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
+## 3.0.16 (2022-01-28)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
+## 3.0.15 (2022-01-28)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
+## 3.0.14 (2022-01-28)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
+## 3.0.13 (2022-01-28)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
+## 3.0.12 (2022-01-28)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
+## [3.0.11](https://github.com/borisov-ivan-2k1/LernaTest/compare/@borisov-ivan-2k1/lib@3.0.10...@borisov-ivan-2k1/lib@3.0.11) (2022-01-28)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
+## 3.0.10 (2022-01-28)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
+## [3.0.7](https://github.com/borisov-ivan-2k1/LernaTest/compare/@borisov-ivan-2k1/lib@3.0.6...@borisov-ivan-2k1/lib@3.0.7) (2022-01-28)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
+## 3.0.6 (2022-01-28)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
+## 3.0.5 (2022-01-28)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
 ## 3.0.3 (2022-01-28)
 
 **Note:** Version bump only for package @borisov-ivan-2k1/lib

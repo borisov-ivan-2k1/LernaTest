@@ -1,16 +1,14 @@
 # action выполняется при пуше в мастер
 # создаёт и пушит теги, заводит релизы и публикует в npm
 
+# TODO Нужно создать теги и релизы с версиями, которые пришли через push
+
 name: 1 Release
 
 on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
-
 
 jobs:
   release:
@@ -44,7 +42,7 @@ jobs:
 
       - name: publish
         run: |
-          lerna version --yes --conventional-commits --create-release github
+          lerna version from-git --yes --conventional-commits --create-release github
           lerna publish from-package --yes
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

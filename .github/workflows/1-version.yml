@@ -19,14 +19,6 @@ on:
         - prerelease
         - from-git
         default: patch
-      package:
-        description: 'Select package'
-        type: choice
-        required: true
-        options:
-        - '@borisov-ivan-2k1/lib'
-        - '@borisov-ivan-2k1/utils'
-        default: patch
 
 jobs:
   publish:
@@ -34,6 +26,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+
 
       - name: Set credentials
         run: |
@@ -54,12 +50,13 @@ jobs:
           node-version: 14
           registry-url: 'https://npm.pkg.github.com/'
 
-      - run: lerna exec -- npm ci
-
-      - run: lerna exec -- npm run lint
+      - name: DIFF
+        run: lerna changed
 
       - name: publish
-        run: lerna version ${{ github.event.inputs.new_version }} --yes --conventional-commits
+        run: |
+          lerna version ${{ github.event.inputs.new_version }} --yes --conventional-commits
+          lerna publish from-package --yes
           
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -71,6 +68,10 @@ jobs:
 # поменять git config
 # возможно поменять ${{ runner.os }}-node-${{ hashFiles('**/package.json') }} с node на lerna
 # Поменять env
+
+
+#      - run: lerna exec -- npm ci
+#      - run: lerna exec -- npm run lint
 
 #      - name: bump version
 #        run: lerna version ${{ github.event.inputs.new_version }} --force-publish=${{ github.event.inputs.package }} --yes --amend --conventional-commits
