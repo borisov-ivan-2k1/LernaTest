@@ -59,7 +59,7 @@ jobs:
       - run: lerna exec -- npm run lint
 
       - name: publish
-        run: lerna publish ${{ github.event.inputs.new_version }} from-package --yes --no-git-reset
+        run: lerna publish ${{ github.event.inputs.new_version }} --yes --no-git-reset
           
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
