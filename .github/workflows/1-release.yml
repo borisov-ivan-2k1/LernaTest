@@ -43,7 +43,7 @@ jobs:
       - run: lerna exec -- npm run lint
 
       - run: |
-          lerna version ${{ github.event.inputs.new_version }} --yes --conventional-commits --create-release github
+          lerna version --yes --conventional-commits --create-release github
           lerna publish from-package --yes 
     
 
