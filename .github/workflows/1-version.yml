@@ -50,7 +50,7 @@ jobs:
       - run: lerna exec -- npm run lint
 
       - name: publish
-        run: lerna version --yes --force-publish --conventional-commits --no-git-tag-version
+        run: lerna version ${{ github.event.inputs.new_version }} --yes --force-publish --conventional-commits --no-git-tag-version
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
