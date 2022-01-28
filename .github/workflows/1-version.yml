@@ -19,6 +19,14 @@ on:
         - prerelease
         - from-git
         default: patch
+      package:
+        description: 'Select package'
+        type: choice
+        required: true
+        options:
+        - '@borisov-ivan-2k1/lib'
+        - '@borisov-ivan-2k1/utils'
+        default: patch
 
 jobs:
   publish:
@@ -51,7 +59,7 @@ jobs:
       - run: lerna exec -- npm run lint
 
       - name: bump version
-        run: lerna version ${{ github.event.inputs.new_version }} --yes --amend --conventional-commits
+        run: lerna version ${{ github.event.inputs.new_version }} --force-publish=${{ github.event.inputs.package }} --yes --amend --conventional-commits
       - name: SHOW DIFF
         run: lerna diff
       - name: publish
