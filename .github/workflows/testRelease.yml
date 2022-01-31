@@ -1,12 +1,14 @@
 name: TEST TEST
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
       - development
       - main
 
 jobs:
   publish:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
@@ -31,7 +33,7 @@ jobs:
         if [ ${{ github.base_ref }} = development ]; then
           npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes
         else
-          npx lerna version --conventional-commits --conventional-graduate --yes --create-release github
+          npx lerna version --conventional-commits --conventional-graduate --yes
         fi
 
         npx lerna publish from-git --yes
