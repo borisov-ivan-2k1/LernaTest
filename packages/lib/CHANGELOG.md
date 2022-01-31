@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.20](https://github.com/borisov-ivan-2k1/LernaTest/compare/@borisov-ivan-2k1/lib@3.0.20-beta.2...@borisov-ivan-2k1/lib@3.0.20) (2022-01-31)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
 ## [3.0.20-beta.2](https://github.com/borisov-ivan-2k1/LernaTest/compare/@borisov-ivan-2k1/lib@3.0.20-beta.1...@borisov-ivan-2k1/lib@3.0.20-beta.2) (2022-01-31)
 
 **Note:** Version bump only for package @borisov-ivan-2k1/lib
