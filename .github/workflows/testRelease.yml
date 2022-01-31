@@ -3,7 +3,7 @@ on:
   pull_request:
     types: [closed]
     branches:
-      - development
+      - develop
       - main
 
 jobs:
@@ -17,10 +17,16 @@ jobs:
       with:
         fetch-depth: 0
 
+    - name: Set credentials
+      run: |
+        git config --global user.name "${{ github.actor }}"
+        git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+
     - name: "Use NodeJS 14"
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: 14
+        registry-url: 'https://npm.pkg.github.com/'
 
     - name: "Version and publish"
       env:
@@ -30,7 +36,7 @@ jobs:
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor}}@users.noreply.github.com"
 
-        if [ ${{ github.base_ref }} = development ]; then
+        if [ ${{ github.base_ref }} = develop ]; then
           npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes
         else
           npx lerna version --conventional-commits --conventional-graduate --yes
