@@ -14,7 +14,7 @@
   },
   "author": "",
   "license": "ISC",
-  "gitHead": "c14b429c3460e39cae63ca9223e8e9a068030123",
+  "gitHead": "4c0bb49cc87fd79d136efd43eb22cee601b062b7",
   "dependencies": {
     "lodash": "^4.17.21"
   }
