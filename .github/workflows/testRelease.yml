@@ -1,14 +1,12 @@
 name: TEST TEST
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches:
       - development
       - main
 
 jobs:
   publish:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
