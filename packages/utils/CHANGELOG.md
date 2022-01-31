@@ -3,7 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [2.0.19](https://github.com/borisov-ivan-2k1/LernaTest/compare/@borisov-ivan-2k1/utils@2.0.19-beta.1...@borisov-ivan-2k1/utils@2.0.19) (2022-01-31)
+# [2.1.0-beta.1](https://github.com/borisov-ivan-2k1/LernaTest/compare/@borisov-ivan-2k1/utils@2.1.0-beta.0...@borisov-ivan-2k1/utils@2.1.0-beta.1) (2022-01-31)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/utils
+
+
+
+
+
+# [2.1.0-beta.0](https://github.com/borisov-ivan-2k1/LernaTest/compare/@borisov-ivan-2k1/utils@2.0.19-beta.1...@borisov-ivan-2k1/utils@2.1.0-beta.0) (2022-01-31)
+
 
 **Note:** Version bump only for package @borisov-ivan-2k1/utils
 
