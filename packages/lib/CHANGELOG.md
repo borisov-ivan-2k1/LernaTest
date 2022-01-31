@@ -3,6 +3,54 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.20-beta.5 (2022-01-31)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
+## [3.0.20-beta.4](https://github.com/borisov-ivan-2k1/LernaTest/compare/@borisov-ivan-2k1/lib@3.0.21...@borisov-ivan-2k1/lib@3.0.20-beta.4) (2022-01-31)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
+## [3.0.20-beta.3](https://github.com/borisov-ivan-2k1/LernaTest/compare/@borisov-ivan-2k1/lib@3.0.20-beta.2...@borisov-ivan-2k1/lib@3.0.20-beta.3) (2022-01-31)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
+## [3.0.20-beta.2](https://github.com/borisov-ivan-2k1/LernaTest/compare/@borisov-ivan-2k1/lib@3.0.20-beta.1...@borisov-ivan-2k1/lib@3.0.20-beta.2) (2022-01-31)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
+## [3.0.20-beta.1](https://github.com/borisov-ivan-2k1/LernaTest/compare/@borisov-ivan-2k1/lib@3.0.20-beta.0...@borisov-ivan-2k1/lib@3.0.20-beta.1) (2022-01-31)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
+## [3.0.20-beta.0](https://github.com/borisov-ivan-2k1/LernaTest/compare/@borisov-ivan-2k1/lib@3.0.19...@borisov-ivan-2k1/lib@3.0.20-beta.0) (2022-01-31)
+
+**Note:** Version bump only for package @borisov-ivan-2k1/lib
+
+
+
+
+
 ## [3.0.19](https://github.com/borisov-ivan-2k1/LernaTest/compare/@borisov-ivan-2k1/lib@3.0.18...@borisov-ivan-2k1/lib@3.0.19) (2022-01-28)
 
 **Note:** Version bump only for package @borisov-ivan-2k1/lib
