@@ -1,4 +1,4 @@
 export const getDate = () => {
-    const a = 'b';
+    // const a = 'b';
    return new Date().getDate();
 }
