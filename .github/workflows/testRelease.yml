@@ -22,6 +22,11 @@ jobs:
       with:
         node-version: '14'
 
+    - name: Set credentials
+      run: |
+        git config --global user.name "${{ github.actor }}"
+        git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+
     - name: "Version and publish"
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
